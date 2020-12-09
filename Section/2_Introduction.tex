@@ -1,0 +1,42 @@
+\section{Introduction} 
+
+Freight transport continues to be an important aspect of the continuously increasing globalization of the world. One of the major expenses in transporting goods with ships is the fuel, which constitutes 50-60\% of the total operating costs~\cite{fuel-costs}~\cite{energy_vision}.
+What greatly influences the fuel consumption is the accumulated organisms on the ship's hull, called fouling. The most common are algaes - simple organisms, which mostly accumulate near the water's surface and are relatively easy to clean. The second common and fairly harder to remove are barnacles - small arthropods, who cement themselves to the hull's surface~\cite{BarnacleGlue}. Their presence increases the hydro-dynamic drag acting on the propulsion system, resulting in less fuel efficient travel~\cite{FoulingPrevention}. One of the existing solutions used to reduce fouling accumulation on the hull, is using anti-fouling coating\cite{AntiFoulingCoating}, preventing organisms from growing on the hull through biocides emission. However, the shipowners need to account for the fact that the biocide aspect of the paint decreases over time and more regulations are being put on them, due to their toxic properties preventing organisms from living in the surrounding water, especially where ships are highly concentrated, like in harbours~\cite{badAntifouling}~\cite{badAntifouling2}. It is estimated that the demand for hull cleanings will increase with the biocide quality of paint lessening. Nowadays, the cleaning is being done either onshore in a dry dock which is time costly, underwater by scuba divers that is a dangerous task or by manually controlled robots that requires more wages, than an automated solution~\cite{divers}~\cite{keelkrab}.
+%add more possible/existing solutions, so it doesnt go anti-fouling paint --> robot alternative
+
+%what is the background on the previous solutions, potential solutions, what was attempted in the present effort, should end with the final problem statement (kind of)
+
+%For this purpose, a robot for underwater hull cleaning was developed~\cite{P6-report}. 
+
+
+%potential solutions and their drawbacks
+When automating the hull-cleaning procedure, it is necessary to specify how the robot should navigate along the hull. For a cleaning robot, full-coverage is a priority. To achieve this, there are two general schools of thought. One is to base the path planning on a known environment/global map, allowing for path planning with a minimal amount of overlapping paths. However, having a known environment would require extra setup, either in the environment with scanners, or on manually inputting the relevant ship model. Another school of thought is based on a minimal amount of initial setup of the environment. This setup is widely known from robot vacuum cleaners, where the robot is meant to work in an unknown environment and randomly move around the surface until a parameter, such as a low battery or time, is met. This is called a random-walk-algorithm. Both of these schools of thought can be supplemented with additional sensors for navigation, localisation or object avoidance, such as cameras and other time-of-flight (TOF) sensors. % like LIDARs or SONARs. 
+
+A potential issue when investigating path-planners based on localization is related to the environment they are to work in. On a large ship-hull, it is difficult to distinguish one location from another, as there are very few detectable and distinct features that can be used as reference points on the surface and be in detectable range of the robot at any point in transit.
+To solve this, artificial reference points could be used. These could be beacons in a fixed position, relative to the ship. Using these would enable the robot to continuously localise itself.
+% Therefore, a different approach for the algorithm development needs to be taken, to ensure the robot is working efficiently. 
+This paper is built upon the results found in a report on the conceptual creation of a hull cleaning robot, \textit{"H.A.C.K." - Hull Autonomous Cleaning Kart}~\cite{P6-report}. The current paper is a continuation of the system designed in this report, and the resulting solution can be found on GitHub\cite{ProjectGithub}.
+The \textit{"H.A.C.K."} robot is equipped with an IMU, two cameras and beacon localization capability.
+This report found "\textit{Cleaning ship’s hulls using a robot seems to be a worthwhile and lucrative goal. It not
+only has the potential to save both time and money, it can also reduce fuel usage and
+emissions, and reduce use of toxic anti-fouling paint, which is good for the environment.}"
+The paper uses simulation to investigate how different navigation methods behave when used for navigation on a ship-hull. The simulation contains the robot \textit{"H.A.C.K."}, where sensors can be changed to suit the different navigation functions. The general environmental variables are controllable and comparison is therefore possible. 
+Each navigation method is tested on several simplified ship-hull models and for multiple iterations, in order to get a better representative mean estimate of the test results. In Chapter II, an introduction to the methods and materials is given, starting with the details of the simulation tool and continuing with describing different algorithms, tested later in Chapter III and evaluated in Chapter IV.  The tested navigation functions are \textit{the random walk}, \textit{beacon-based algorithm (BBA)} and \textit{Slicer}. 
+
+%The difficulty in this problem is due to missing sensor data, as the setup is using a minimal exteroceptive sensor setup, due to the testing environment being unsuitable for exteroceptive sensors. 
+
+%\textit{\textcolor{gray}{Explain the problem, what is known, what is not known, the objective of the project}}
+
+%\textit{\textcolor{darkgray}{Why and what for (four): \begin{itemize}
+%    \item WHY is the topic of interest? - done
+%    \item WHAT is the background on the previous solutions, if any?
+%    \item WHAT is the background on the potential solutions?
+%    \item WHAT was attempted in the present effort?
+%    \item WHAT will be presented in this paper? - done
+%\end{itemize}}}
+
+%\textit{\textcolor{gray}{the use of a functioning robot is assumed as seen in figure \ref{image_of_robot}, with the capabilities discussed in section \ref{meth_&_mat:assumptions}
+%It should provide overview and references to previous work, show what research efforts have already been undertaken, may also outline difficulties in previous work. It should help the reader find good references, show that we (the authors) know the field, it should help setting the stage for the present work and help highlighting the contribution presented in the paper.}}
+
+%\textit{\textcolor{gray}{Remember to set up the hypothesis, like the final problem statement, but much more narrow. It must be testable and may not always be written explicitly in the introduction, but should be apparent to the reader. 
+%We should, based on everything described before, provide to the reader what this paper provides of novelty and outline the rest of the paper.}}

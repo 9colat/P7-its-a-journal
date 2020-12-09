@@ -1,0 +1,22 @@
+\begin{algorithm}
+	\caption{Slicer coverage} \label{algo:CompCove}
+	\begin{small}
+	
+	
+	\begin{algorithmic}[1]
+		\State Load $STL$ 
+		\State Slice $STL$ into separate layers
+		\For{$Point$ in Slice}
+		\State Store Slice (x,z) and layerHeight(y) in a List
+		\EndFor
+		\State idx = 0
+		\If {$idx\;!= length\;of\;List$}
+		    \State x,y,z = List[idx]
+		    \State send (x,y,z) to local planner
+		    \State idx++
+		\Else
+		\State Hull is clean
+		\EndIf
+	\end{algorithmic}
+	\end{small}
+\end{algorithm}

@@ -1,0 +1,67 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+%\usepackage{todonotes}
+\usepackage{hyperref}
+% Bibliography
+% http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{natbib}
+\bibliographystyle{unsrt} %HELLO Vancouver style attempt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Misc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add bibliography and index to the table of
+% contents
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{inputenc}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{algorithm} 
+\usepackage{algpseudocode} 
+\usepackage{adjustbox}  
+%\setlength\topmargin{-0.80in} 
+%\setlength\oddsidemargin{-0.25in}
+%\setlength\evensidemargin{-0.25in}
+%\setlength\textheight{9in}
+%\setlength\textwidth{7.0in}
+%\setlength\columnsep{0.25in}
+%\newlength\titlebox \setlength\titlebox{2.75in}
+
+
+\title{Comparison of Navigation Techniques of Mobile Robots on the Underside of Ships' Hulls \\
+       }
+
+\author{A. Dudlik, C. Mikkelsen, I. Pujol, M. Blankensteiner, N. Sørensen and S. Howell}
+\date{December 2020}
+
+\markboth{Journal of SEMCON, December~2020}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+
+
+\begin{document}
+%\listoftodos
+\maketitle
+
+\input{Section/1_abstract.tex}
+\input{Section/2_Introduction.tex}
+\input{Section/3_Methods}
+\input{Section/4_Results.tex}
+\input{Section/5_Discussion.tex}
+%%\input{Section/6_Conclusion}
+
+\bibliography{Bibliography/bibliography}
+
+
+\end{document}

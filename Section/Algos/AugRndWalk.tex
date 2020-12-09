@@ -1,0 +1,15 @@
+\begin{algorithm}
+    \begin{small}
+	\caption{Time-Dependent Random Walk}\label{algo:AugRndWalk}
+	\begin{algorithmic}[1]
+		\If {$hull \;!=\; clean$}
+		    \State timeToPass = time + randomNumber.
+			\If {$point visited = true\;||\;timeToPass < timeNow $}
+			   \State Generate a new point ({x,y}) at r dist from HACK and send it to the local-planner.
+		    \Else
+			    \State Resend old point ({x,y}) to local-planner.
+			\EndIf	
+		\EndIf
+	\end{algorithmic} 
+	\end{small}
+\end{algorithm}

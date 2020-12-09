@@ -1,0 +1,22 @@
+\begin{algorithm}
+    \begin{small}
+	\caption{Boundary-based Algorithm}\label{algo:BBA}
+	\small
+	\begin{algorithmic}[1]
+		\If {surface\_boundary != True and stern\_boundary != True and start == False}
+		    \State start = True
+		\EndIf
+		\If {start == True}
+		    \State move towards the bow boundary
+        		\If {stern\_boundary == True or bow\_boundary == True}
+        		    \State move down a height layer
+        		\EndIf
+        		\If {keel\_boundary == True}
+        		    \State go to the other side of the boat
+        		    \State start = False
+			    \EndIf	
+		\EndIf
+	\end{algorithmic}
+	\label{alg:BBA}
+	\end{small}
+\end{algorithm}

@@ -1,0 +1,14 @@
+\begin{algorithm}
+	\caption{Random Walk} \label{algo:RndWalk}
+	
+    \small
+	\begin{algorithmic}[1]
+		\If {$hull \;!=\; clean$}
+			\If {$point visited = true$}
+				\State Generate a new point ({x,y}) at r dist from HACK and send it to the local-planner.
+			\Else
+			    \State Resend old point (x,y) to local planner.
+			\EndIf
+		\EndIf
+	\end{algorithmic} 
+\end{algorithm}

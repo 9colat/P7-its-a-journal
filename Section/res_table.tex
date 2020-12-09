@@ -1,0 +1,24 @@
+\begin{table}[H]
+\begin{adjustbox}{max width=0.5\textwidth, center }
+    \centering
+    \begin{tabular}{|p{1.7cm}||p{1cm}|p{2cm}|p{1.5cm}|}
+    \hline
+    \multicolumn{4}{|c|}{Algorithm test} \\
+    \hline
+    Algorithm & Coverage in \%  & Coverage-over-time (180 min) & Gradient of covered area \\
+    \hline
+    \hline
+    Random walk & 12\% & $506 m^2$ & $2.70~dm^2/ds$ \\
+    Slicer & 18\%& $758 m^2$ & $4.03~dm^2/ds$ \\
+    BBA & 27\% &$1129 m^2$ & $6.16~dm^2/ds$ \\
+    \hline
+    \end{tabular}
+\end{adjustbox}
+\captionsetup{justification=centering,margin=0cm}
+\caption{Table of comparative results. The table data shows the efficiency results after 180 minutes in simulation.
+}
+\label{tab:res}
+\end{table}
+
+%SLOPES: BBA = 6.16; Random = 2.70; Slicer = 4.03
+%std: BBA = 149.55 m^2; Random = 61.46 m^2; Slicer = 86.68 m^2

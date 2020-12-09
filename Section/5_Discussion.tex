@@ -1,0 +1,35 @@
+\section{Discussion}
+%    Short Intro
+This paper investigated which navigation function type would be best suited for a robot to clean a ship-hull. This was done by testing three types of navigation functions with unique paths, a low requirements Random Walk and two algorithms localizing through beacons and GPS, but one with a bias towards horizontal movement (BBA) and one with a bias towards vertical movements (Slicer). These navigation functions were evaluated with a focus towards efficient coverage over time. 
+
+%    key results and finding
+The testing showed that the BBA had a better performance than the other algorithms. It had a coverage percentile of 31\% after 3 hours, which showcases that with small improvements in the cleaning direction, a large improvement was observed between the directions. 
+%The results show the coverage rate of the algorithms.
+%table results
+As seen in table~\ref{tab:res}, Random Walk algorithm performs less efficiently compared to other algorithms, in terms of coverage-over-time. The results for Slicer and BBA differ from the expectations, as they should perform almost the same. The reason for it is the gravity that the Slicer had to counteract. The resulted gradient of covered area for Slicer was also expected to be bigger, meaning the speed of cleaning was expected to be faster. 
+
+
+
+%    interpretation of results and findings
+
+% Gravity and Slicer
+In figure~\ref{fig:path}, it was observed that the path of the Slicer algorithm did not follow the intended path. This was due to the vector of the velocity being aligned with the gravity. Using this algorithm, the robot had to counteract gravity every time it had reacted the lower bound - this meant that it took more effort to go to the top again. Gravity also effected BBA when its starting position on the plane was initialised, but this was a fraction of the total operating time. When the BBA reached the start position, it only had to compensate slightly for the gravity.
+
+% Velocity
+It can be seen that the BBA algorithm is potentially the best solution for cleaning the ship-hull, as it covers almost the entire surface of the tested plane.
+Figure~\ref{fig:path} indicates that H.A.C.K. is traversing in more stable manner using BBA, which could also be an indicator that the movement of BBA has almost constant velocity, whereas using the Slicer algorithm showed a more inconsistent velocity.
+
+% Infrastructure
+Both algorithms require infrastructure implementation for a full working solution, which can be expensive and time consuming - they require mounting beacons on the hull beforehand, whilst Slicer additionally requires initial scan of the boat.
+As such, the Random Walk might be more suited for certain situations. Figure \ref{fig:results_graph} shows that the Random Walk only covers a minimal amount of new surface after reaching the roughly 12\% coverage. It is observed that the Random Walk continues to move around in roughly the same area, and has a high amount of overlap after about 50 minutes and a minimal amount of new area covered. This might indicate an issue in algorithm implementation. 
+
+% discuss the table of results
+
+
+\section*{Acknowledgement}
+\begin{center}
+    Jóannes Reynskor\\
+    (Bsc. in Robotics)
+\end{center}
+    
+
